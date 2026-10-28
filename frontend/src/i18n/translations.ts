@@ -51,18 +51,6 @@ export const LANGS: { code: Lang; label: string; html: string }[] = [
   { code: "zh", label: "ZH", html: "zh-CN" },
 ];
 
-const expertiseEN: Step[] = [
-  { title: "Corporate & Contracts", text: "" },
-  { title: "Tax", text: "" },
-  { title: "Labor & Employment", text: "" },
-  { title: "Civil & Business Litigation", text: "" },
-  { title: "Real Estate & Regulatory", text: "" },
-  { title: "Ongoing Legal Counsel", text: "" },
-];
-
-const withTexts = (texts: string[]): Step[] =>
-  expertiseEN.map((item, i) => ({ title: item.title, text: texts[i] }));
-
 export const translations: Record<Lang, Dictionary> = {
   pt: {
     nav: { about: "Sobre", advantages: "Vantagens", services: "Serviços", team: "Equipe", contact: "Contato" },
@@ -117,14 +105,14 @@ export const translations: Record<Lang, Dictionary> = {
       eyebrow: "Áreas de atuação",
       title: "Assessoria completa para operar no Brasil",
       intro: "Uma equipe integrada para as principais frentes jurídicas de quem investe e opera na Bahia.",
-      items: withTexts([
-        "Societário, contratos comerciais, joint ventures e governança.",
-        "Planejamento tributário, incentivos fiscais e contencioso tributário.",
-        "Relações de trabalho, contratação de equipes e conformidade trabalhista.",
-        "Contencioso cível e empresarial, negociação e resolução de disputas.",
-        "Aquisição e locação de imóveis, licenças e questões regulatórias.",
-        "Acompanhamento jurídico contínuo da rotina da empresa.",
-      ]),
+      items: [
+        { title: "Societário e Contratos", text: "Societário, contratos comerciais, joint ventures e governança." },
+        { title: "Tributário", text: "Planejamento tributário, incentivos fiscais e contencioso tributário." },
+        { title: "Trabalhista", text: "Relações de trabalho, contratação de equipes e conformidade trabalhista." },
+        { title: "Contencioso Cível e Empresarial", text: "Contencioso cível e empresarial, negociação e resolução de disputas." },
+        { title: "Imobiliário e Regulatório", text: "Aquisição e locação de imóveis, licenças e questões regulatórias." },
+        { title: "Assessoria Jurídica Contínua", text: "Acompanhamento jurídico contínuo da rotina da empresa." }
+      ],
     },
     team: {
       eyebrow: "Equipe",
@@ -206,14 +194,14 @@ export const translations: Record<Lang, Dictionary> = {
       eyebrow: "Practice areas",
       title: "Full legal support to operate in Brazil",
       intro: "An integrated team covering the key legal fronts for those who invest and operate in Bahia.",
-      items: withTexts([
-        "Corporate law, commercial contracts, joint ventures and governance.",
-        "Tax planning, tax incentives and tax litigation.",
-        "Labor relations, hiring and employment compliance.",
-        "Civil and business litigation, negotiation and dispute resolution.",
-        "Property acquisition and leasing, licensing and regulatory matters.",
-        "Continuous legal support for the company's daily operations.",
-      ]),
+      items: [
+        { title: "Corporate & Contracts", text: "Corporate law, commercial contracts, joint ventures and governance." },
+        { title: "Tax", text: "Tax planning, tax incentives and tax litigation." },
+        { title: "Labor & Employment", text: "Labor relations, hiring and employment compliance." },
+        { title: "Civil & Business Litigation", text: "Civil and business litigation, negotiation and dispute resolution." },
+        { title: "Real Estate & Regulatory", text: "Property acquisition and leasing, licensing and regulatory matters." },
+        { title: "Ongoing Legal Counsel", text: "Continuous legal support for the company's daily operations." }
+      ],
     },
     team: {
       eyebrow: "Team",
@@ -295,14 +283,14 @@ export const translations: Record<Lang, Dictionary> = {
       eyebrow: "业务领域",
       title: "在巴西运营的全方位法律支持",
       intro: "一支综合团队，覆盖在巴伊亚投资和运营所需的主要法律领域。",
-      items: withTexts([
-        "公司法、商业合同、合资企业与公司治理。",
-        "税务规划、税收优惠及税务诉讼。",
-        "劳动关系、员工招聘及劳动合规。",
-        "民事与商业诉讼、谈判及争议解决。",
-        "不动产购置与租赁、许可及监管事务。",
-        "为企业日常运营提供持续法律顾问服务。",
-      ]),
+      items: [
+        { title: "公司与合同", text: "公司法、商业合同、合资企业与公司治理。" },
+        { title: "税务", text: "税务规划、税收优惠及税务诉讼。" },
+        { title: "劳动与雇佣", text: "劳动关系、员工招聘及劳动合规。" },
+        { title: "民商事诉讼", text: "民事与商业诉讼、谈判及争议解决。" },
+        { title: "房地产与监管", text: "不动产购置与租赁、许可及监管事务。" },
+        { title: "持续法律顾问", text: "为企业日常运营提供持续法律顾问服务。" }
+      ],
     },
     team: {
       eyebrow: "团队",

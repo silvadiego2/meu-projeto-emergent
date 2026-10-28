@@ -12,7 +12,6 @@ export const Hero = () => {
     <section id="top" data-testid="hero-section" className="relative flex min-h-screen items-center overflow-hidden bg-navy pt-20">
       <img src={HERO_IMG} alt="" className="absolute inset-0 h-full w-full object-cover opacity-35 grayscale" />
       <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/30" />
-      <div className="absolute inset-y-0 left-[8%] hidden w-px bg-white/10 lg:block" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 py-24 lg:px-10">
         <div className="max-w-3xl animate-[heroIn_1s_ease-out_both]">
